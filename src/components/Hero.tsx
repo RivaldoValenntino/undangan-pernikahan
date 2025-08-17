@@ -1,13 +1,16 @@
 import RoundedImg from "../assets/images/bg-rounded.jpeg";
+import flowerImage from "../assets/images/bunga-2.png";
 const Hero = ({ name: name }: { name: string | undefined }) => {
   return (
     <div className="flex flex-col text-white z-[9999] text-center gap-4 w-full max-w-sm items-center">
-      <div className="h-40 w-40">
+      <div className="h-40 w-40 relative">
         <img
           src={RoundedImg}
           alt=""
           className="w-full h-full object-cover rounded-full border-3 border-white"
         />
+        <img src={flowerImage} alt="" className="absolute -top-5 rotate-180" />
+        <img src={flowerImage} alt="" className="absolute -bottom-5" />
       </div>
 
       <h1 className="font-montaga font-semibold text-3xl lg:text-2xl xl:text-2xl">

@@ -291,7 +291,7 @@ function RouteComponent() {
             location="Grand Ballroom Hotel XYZ"
             address="Jl. Soekarno-Hatta No.791B, Babakan Penghulu, Kec. Cinambo, Kota Bandung, Jawa Barat 40293"
           />
-          <div className="w-full max-w-lg mt-6 rounded-xl overflow-hidden shadow-lg">
+          <div className="w-full max-w-md mt-6 overflow-hidden shadow-lg">
             <div className="aspect-[4/3] w-full">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.6124751582083!2d107.68541237487385!3d-6.936832993063157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c2b84b4739a5%3A0x86f4dfb4687ce617!2sGrand%20Cordela%20Hotel%20Bandung!5e0!3m2!1sen!2sid!4v1755405397661!5m2!1sen!2sid"
