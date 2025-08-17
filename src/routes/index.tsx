@@ -109,8 +109,7 @@ function RouteComponent() {
       behavior: "smooth",
     });
 
-    // reset flag setelah scroll selesai (misal 800ms sesuai smooth)
-    setTimeout(() => setManualScrolling(false), 800);
+    setTimeout(() => setManualScrolling(false), 300);
   };
 
   /* ===== 🎵 BACKGROUND MUSIC ===== */
