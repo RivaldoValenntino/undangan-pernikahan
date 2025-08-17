@@ -32,6 +32,10 @@ export default function WeddingAttendanceForm() {
       "https://script.google.com/macros/s/AKfycbxRTwN4OsC9YJkDxA8rjYPImQEGnPjd18QnBvWyGRbEoFLbQA2onPNr2nkFSPXPUS4Y/exec";
 
     try {
+      if (!formData.status) {
+        alert("Status kehadiran harus diisi.");
+        return;
+      }
       const response = await fetch(scriptURL, {
         method: "POST",
         body: new URLSearchParams({
@@ -42,6 +46,7 @@ export default function WeddingAttendanceForm() {
 
       if (response.ok) {
         setSuccess(true);
+        setTimeout(() => setSuccess(false), 2000);
         setFormData({ nama: "", jumlah: "", status: "" });
       } else {
         alert("Terjadi kesalahan, coba lagi.");
