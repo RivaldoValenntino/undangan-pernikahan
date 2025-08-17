@@ -29,6 +29,8 @@ function RouteComponent() {
     "/src/assets/images/bg-prewed.jpg",
   ];
 
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+
   const [currentBg, setCurrentBg] = useState(0);
   const [showBottomNav, setShowBottomNav] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -80,7 +82,7 @@ function RouteComponent() {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.3 }
     );
 
     sections.forEach((section) => {
@@ -96,9 +98,12 @@ function RouteComponent() {
 
   const handleNavClick = (index: number) => {
     setActiveIndex(index);
-    sectionRefs[index].current?.scrollIntoView({
+    const target = sectionRefs[index].current;
+    if (!target) return;
+
+    scrollContainerRef.current?.scrollTo({
+      top: target.offsetTop,
       behavior: "smooth",
-      block: "start",
     });
   };
 
@@ -193,7 +198,10 @@ function RouteComponent() {
       ))}
 
       {/* Scrollable container */}
-      <div className="relative z-10 overflow-y-auto h-dvh scroll-smooth">
+      <div
+        ref={scrollContainerRef}
+        className="relative z-10 overflow-y-auto h-dvh scroll-smooth"
+      >
         {/* Hero */}
         <div
           ref={homeRef}
