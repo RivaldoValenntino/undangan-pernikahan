@@ -314,7 +314,7 @@ function RouteComponent() {
 
         <div
           ref={giftRef}
-          className="bg-[#FFF2EB] min-h-screen flex items-center justify-center"
+          className="bg-[#FFF2EB] min-h-screen flex items-center justify-center py-8"
         >
           <GiftSection />
         </div>

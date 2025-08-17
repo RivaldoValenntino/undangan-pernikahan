@@ -7,7 +7,11 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-
+import Image1 from "../assets/images/bg-gallery-1.jpg";
+import Image2 from "../assets/images/bg-gallery-2.jpg";
+import Image3 from "../assets/images/bg-gallery-3.jpg";
+import Image4 from "../assets/images/bg-gallery-4.jpg";
+import Image5 from "../assets/images/bg-gallery-5.jpg";
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
@@ -16,13 +20,7 @@ const SwiperGallery = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
   // ✅ JSON array isi gambar
-  const galleryImages = [
-    "src/assets/images/bg-gallery-1.jpg",
-    "src/assets/images/bg-gallery-2.jpg",
-    "src/assets/images/bg-gallery-3.jpg",
-    "src/assets/images/bg-gallery-4.jpg",
-    "src/assets/images/bg-gallery-5.jpg",
-  ];
+  const galleryImages = [Image1, Image2, Image3, Image4, Image5];
 
   return (
     <div>
