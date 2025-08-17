@@ -172,12 +172,6 @@ function RouteComponent() {
     }
   };
 
-  const smoothScrollTo = (ref: React.RefObject<HTMLDivElement>) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
   const fabBottomClass = showBottomNav ? "bottom-24" : "bottom-4"; // naik dikit biar ga tabrakan dgn BottomNav
 
   return (
