@@ -11,7 +11,7 @@ const Undangan = ({
 }) => {
   return (
     <section
-      className="flex justify-center py-12 h-dvh px-4 bg-[#FFF2EB] flex-col gap-8 font-montaga"
+      className="flex items-center py-12 h-dvh mb-20 px-4 bg-[#FFF2EB] flex-col gap-8 font-montaga"
       ref={refProps}
     >
       <div className="bg-white px-6 py-8 rounded-md w-full mx-auto max-w-3xl shadow-md relative flex flex-col items-center">

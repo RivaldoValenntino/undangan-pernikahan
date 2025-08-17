@@ -209,7 +209,7 @@ function RouteComponent() {
         </div>
 
         {/* Invitation */}
-        <div ref={invitationRef} className="h-screen bg-white">
+        <div ref={invitationRef} className="h-screen min-h-screen bg-[#FFF2EB]">
           <Undangan
             refProps={invitationRef}
             onAction={() =>
@@ -221,7 +221,7 @@ function RouteComponent() {
         {/* Couple */}
         <div
           ref={coupleRef}
-          className="min-h-screen h-screen bg-[#FFF2EB] py-8"
+          className="bg-[#FFF2EB] flex items-center justify-center py-8"
         >
           <UndanganCard
             onAction={() =>
@@ -246,7 +246,7 @@ function RouteComponent() {
 
         {/* Gallery */}
         <div
-          className="bg-[#FFF2EB] h-screen min-h-screen flex items-center justify-center py-8"
+          className="bg-[#FFF2EB] flex items-center justify-center py-12"
           ref={storyRef}
         >
           <StorySection

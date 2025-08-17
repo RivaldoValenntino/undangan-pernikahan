@@ -48,7 +48,7 @@ export default function WeddingAttendanceForm() {
   };
 
   return (
-    <div className="flex justify-center items-center bg-pink-50 px-4 font-montaga pb-32">
+    <div className="flex justify-center items-center bg-[#FFF2EB] h-screen px-4 font-montaga pb-32">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-xl bg-white shadow-md rounded-md p-12 space-y-6"
