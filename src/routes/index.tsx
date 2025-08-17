@@ -13,6 +13,8 @@ import GiftSection from "../components/GiftSection";
 import AUDIO_SRC from "../assets/audio/audio-bg.mp3";
 import bgPrewed1 from "../assets/images/bg-prewed.jpg";
 import bgPrewed2 from "../assets/images/bg-prewed2.jpg";
+import SwiperGallery from "../components/SwiperGallery";
+
 export const Route = createFileRoute("/")({
   component: RouteComponent,
   validateSearch: (search: Record<string, unknown>) => {
@@ -24,9 +26,9 @@ export const Route = createFileRoute("/")({
 
 function RouteComponent() {
   const images = [
+    "/src/assets/images/bg-prewed.jpg",
     "/src/assets/images/bg-prewed2.jpg",
     "/src/assets/images/bg-prewed3.jpg",
-    "/src/assets/images/bg-prewed.jpg",
   ];
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -178,7 +180,6 @@ function RouteComponent() {
         });
     }
   };
-
   const fabBottomClass = showBottomNav ? "bottom-24" : "bottom-4"; // naik dikit biar ga tabrakan dgn BottomNav
 
   return (
@@ -259,7 +260,7 @@ function RouteComponent() {
 
         {/* Gallery */}
         <div
-          className="bg-[#FFF2EB] flex items-center justify-center py-12"
+          className="bg-[#FFF2EB] flex flex-col items-center justify-center py-12 gap-12"
           ref={storyRef}
         >
           <StorySection
@@ -269,6 +270,10 @@ function RouteComponent() {
             bottomImage={bgPrewed2}
             description="Lorem ipsum justo, enim augue neque, eu pulvinar etiam. Elit quam gravida a nec. Mauris eu nulla vulputate vitae nisl, massa vulputate tellus sit. Sit integer cras nibh sodales. Sit pharetra, tellus elit in."
           />
+          <h1 className="text-3xl font-bold font-montaga text-pink-600">
+            Gallery
+          </h1>
+          <SwiperGallery />
         </div>
 
         {/* RSVP */}
@@ -276,6 +281,9 @@ function RouteComponent() {
           ref={rsvpRef}
           className="bg-[#FFF2EB] min-h-screen flex flex-col items-center justify-center py-12"
         >
+          <h1 className="text-3xl font-bold font-montaga text-pink-600 py-4">
+            RSVP
+          </h1>
           {/* Google Maps */}
           <WeddingInfoCard
             date="Sunday, 21 July 2024"
@@ -306,13 +314,12 @@ function RouteComponent() {
 
         <div
           ref={giftRef}
-          className="bg-[#FFF2EB] min-h-screen flex items-center justify-center py-12"
+          className="bg-[#FFF2EB] min-h-screen flex items-center justify-center"
         >
           <GiftSection />
         </div>
       </div>
 
-      {/* BottomNav tetap fixed */}
       <AnimatePresence>
         {showBottomNav && (
           <motion.div
@@ -328,7 +335,6 @@ function RouteComponent() {
         )}
       </AnimatePresence>
 
-      {/* 🎵 Floating Play/Pause Button */}
       <button
         type="button"
         onClick={togglePlay}
