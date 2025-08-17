@@ -94,7 +94,10 @@ function RouteComponent() {
 
   const handleNavClick = (index: number) => {
     setActiveIndex(index);
-    smoothScrollTo(sectionRefs[index]);
+    sectionRefs[index].current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   /* ===== 🎵 BACKGROUND MUSIC ===== */
