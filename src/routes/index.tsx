@@ -11,6 +11,8 @@ import WeddingInfoCard from "../components/WeddingInfoCard";
 import WeddingAttendanceForm from "../components/WeddingAttedanceForm";
 import GiftSection from "../components/GiftSection";
 import AUDIO_SRC from "../assets/audio/audio-bg.mp3";
+import bgPrewed1 from "../assets/images/bg-prewed.jpg";
+import bgPrewed2 from "../assets/images/bg-prewed2.jpg";
 export const Route = createFileRoute("/")({
   component: RouteComponent,
   validateSearch: (search: Record<string, unknown>) => {
@@ -255,8 +257,8 @@ function RouteComponent() {
           <StorySection
             title="THE FIRST MEET"
             year="2018"
-            topImage="/src/assets/images/bg-prewed2.jpg"
-            bottomImage="/src/assets/images/bg-prewed.jpg"
+            topImage={bgPrewed1}
+            bottomImage={bgPrewed2}
             description="Lorem ipsum justo, enim augue neque, eu pulvinar etiam. Elit quam gravida a nec. Mauris eu nulla vulputate vitae nisl, massa vulputate tellus sit. Sit integer cras nibh sodales. Sit pharetra, tellus elit in."
           />
         </div>
