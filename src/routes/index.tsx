@@ -263,6 +263,9 @@ function RouteComponent() {
           className="bg-[#FFF2EB] flex flex-col items-center justify-center py-12 gap-12"
           ref={storyRef}
         >
+          <h1 className="text-3xl font-bold font-montaga text-pink-600 py-4">
+            Our Story
+          </h1>
           <StorySection
             title="THE FIRST MEET"
             year="2018"
