@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 export default function WeddingAttendanceForm() {
   const [formData, setFormData] = useState({
@@ -9,18 +10,24 @@ export default function WeddingAttendanceForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const statusOptions = ["Hadir", "Tidak Hadir"];
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const handleStatusSelect = (value: string) => {
+    setFormData({ ...formData, status: value });
+    setOpenDropdown(false);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    const created_at = new Date().toISOString(); // Auto date
+    const created_at = new Date().toISOString();
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbxRTwN4OsC9YJkDxA8rjYPImQEGnPjd18QnBvWyGRbEoFLbQA2onPNr2nkFSPXPUS4Y/exec";
 
@@ -90,22 +97,33 @@ export default function WeddingAttendanceForm() {
           />
         </div>
 
-        {/* Status Kehadiran */}
-        <div>
+        {/* Custom Dropdown Status Kehadiran */}
+        <div className="relative">
           <label className="block text-lg font-medium text-gray-700 mb-2">
             Status Kehadiran
           </label>
-          <select
-            name="status"
-            value={formData.status}
-            onChange={handleChange}
-            required
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+          <div
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-lg flex justify-between items-center cursor-pointer bg-white hover:border-pink-400 transition"
+            onClick={() => setOpenDropdown(!openDropdown)}
           >
-            <option value="">Pilih Status</option>
-            <option value="Hadir">Hadir</option>
-            <option value="Tidak Hadir">Tidak Hadir</option>
-          </select>
+            {formData.status || "Pilih Status"}
+            <ChevronDown
+              className={`w-5 h-5 transition-transform ${openDropdown ? "rotate-180" : ""}`}
+            />
+          </div>
+          {openDropdown && (
+            <ul className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg">
+              {statusOptions.map((option) => (
+                <li
+                  key={option}
+                  onClick={() => handleStatusSelect(option)}
+                  className="px-4 py-3 text-lg hover:bg-pink-100 cursor-pointer"
+                >
+                  {option}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         {/* Tombol Submit */}
