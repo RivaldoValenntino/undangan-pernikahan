@@ -35,19 +35,19 @@ const Countdown = () => {
 
   return (
     <div className="w-full flex justify-center items-center gap-6 text-center text-white text-2xl font-bold font-poppins">
-      <div className="text-black text-md flex flex-col items-center justify-center rounded-sm">
+      <div className="text-white text-md px-3 py-2 bg-primary flex flex-col items-center justify-center rounded-sm">
         <p>{timeLeft.days}</p>
         <p className="text-sm font-normal">Hari</p>
       </div>
-      <div className="text-black text-md flex flex-col items-center justify-center rounded-sm">
+      <div className="text-white text-md px-3 py-2 bg-primary flex flex-col items-center justify-center rounded-sm">
         <p>{timeLeft.hours}</p>
         <p className="text-sm font-normal">Jam</p>
       </div>
-      <div className="text-black text-md flex flex-col items-center justify-center rounded-sm">
+      <div className="text-white text-md px-3 py-2 bg-primary flex flex-col items-center justify-center rounded-sm">
         <p>{timeLeft.minutes}</p>
         <p className="text-sm font-normal">Menit</p>
       </div>
-      <div className="text-black text-md flex flex-col items-center justify-center rounded-sm">
+      <div className="text-white text-md px-3 py-2 bg-primary flex flex-col items-center justify-center rounded-sm">
         <p>{timeLeft.seconds}</p>
         <p className="text-sm font-normal">Detik</p>
       </div>

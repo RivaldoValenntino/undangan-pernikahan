@@ -76,7 +76,7 @@ export default function GiftSection() {
                       <Copy size={18} />
                     </button>
                   </div>
-                  <p className="text-xs text-pink-600 font-medium">{w.bank}</p>
+                  <p className="text-xs font-bold text-pink-600">{w.bank}</p>
                   {copiedIndex === i && (
                     <p className="text-green-500 text-xs mt-1">
                       Copied to clipboard!
