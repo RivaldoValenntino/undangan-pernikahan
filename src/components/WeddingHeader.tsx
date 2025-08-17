@@ -1,5 +1,5 @@
 import React from "react";
-// import Countdown from "./Countdown";
+import Countdown from "./Countdown";
 
 interface WeddingHeaderCardProps {
   title?: string;
@@ -33,7 +33,7 @@ const WeddingHeaderCard: React.FC<WeddingHeaderCardProps> = ({
       <h3 className="text-gray-700 text-lg font-semibold mb-6">{date}</h3>
 
       {/* Countdown Boxes */}
-      {/* <Countdown /> */}
+      <Countdown />
     </div>
   );
 };
