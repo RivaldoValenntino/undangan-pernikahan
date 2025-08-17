@@ -25,6 +25,7 @@ export default function GiftSection() {
 
   useEffect(() => {
     // konfigurasi Disqus
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).disqus_config = function () {
       this.page.url = window.location.href; // bisa pakai URL artikel
       this.page.identifier = "gift-section"; // ganti dengan slug / id unik halaman

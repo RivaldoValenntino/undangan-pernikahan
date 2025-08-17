@@ -1,5 +1,5 @@
 import RoundedImg from "../assets/images/bg-rounded.jpeg";
-const Hero = ({ name: name }: { name: string }) => {
+const Hero = ({ name: name }: { name: string | undefined }) => {
   return (
     <div className="flex flex-col text-white z-[9999] text-center gap-4 w-full max-w-sm items-center">
       <div className="h-40 w-40">

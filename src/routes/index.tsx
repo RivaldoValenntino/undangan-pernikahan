@@ -13,6 +13,11 @@ import GiftSection from "../components/GiftSection";
 import AUDIO_SRC from "../assets/audio/audio-bg.mp3";
 export const Route = createFileRoute("/")({
   component: RouteComponent,
+  validateSearch: (search: Record<string, unknown>) => {
+    return {
+      nama: (search.nama as string) ?? "",
+    };
+  },
 });
 
 function RouteComponent() {
