@@ -32,7 +32,7 @@ function RouteComponent() {
   ];
 
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-
+  const [manualScrolling, setManualScrolling] = useState(false);
   const [currentBg, setCurrentBg] = useState(0);
   const [showBottomNav, setShowBottomNav] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -73,7 +73,8 @@ function RouteComponent() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (!manualScrolling && entry.isIntersecting) {
+            // baru update activeIndex
             const section = sections.find(
               (s) => s.ref.current === entry.target
             );
@@ -96,10 +97,10 @@ function RouteComponent() {
         if (section.ref.current) observer.unobserve(section.ref.current);
       });
     };
-  }, []);
+  });
 
   const handleNavClick = (index: number) => {
-    setActiveIndex(index);
+    setManualScrolling(true);
     const target = sectionRefs[index].current;
     if (!target) return;
 
@@ -107,6 +108,9 @@ function RouteComponent() {
       top: target.offsetTop,
       behavior: "smooth",
     });
+
+    // reset flag setelah scroll selesai (misal 800ms sesuai smooth)
+    setTimeout(() => setManualScrolling(false), 800);
   };
 
   /* ===== 🎵 BACKGROUND MUSIC ===== */
