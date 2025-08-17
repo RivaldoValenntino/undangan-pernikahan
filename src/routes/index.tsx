@@ -292,9 +292,8 @@ function RouteComponent() {
             It's an honor and happiness for us if Mr/Ms/Brother is willing to
             attend to give blessings to the bride and groom.
           </p>
+          <WeddingAttendanceForm />
         </div>
-
-        <WeddingAttendanceForm />
 
         <div
           ref={giftRef}
