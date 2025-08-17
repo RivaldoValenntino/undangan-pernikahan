@@ -13,17 +13,17 @@ const Hero = ({ name: name }: { name: string | undefined }) => {
         <img src={flowerImage} alt="" className="absolute -bottom-5" />
       </div>
 
-      <h1 className="font-montaga font-semibold text-3xl lg:text-2xl xl:text-2xl">
+      <h1 className="font-montaga font-semibold text-xl lg:text-2xl xl:text-2xl">
         Kepada Bapak/Ibu/Saudara/i
       </h1>
-      <h1 className="font-montaga font-semibold text-3xl lg:text-2xl xl:text-2xl">
+      <h1 className="font-montaga font-semibold text-lg lg:text-2xl xl:text-2xl">
         {name ?? "-"}
       </h1>
 
       <h1 className="font-montaga font-semibold text-3xl lg:text-2xl xl:text-2xl">
         The Wedding Of
       </h1>
-      <p className="font-bold font-clicker text-7xl lg:text-7xl xl:text-7xl">
+      <p className="font-bold font-clicker text-6xl lg:text-7xl xl:text-7xl">
         Vania & Eko
       </p>
       {/* <p className="font-bold font-montaga text-md lg:text-2xl xl:text-2xl">
