@@ -18,7 +18,7 @@ const StorySection: React.FC<StorySectionProps> = ({
   return (
     <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden font-montaga">
       {/* Gambar Atas */}
-      <img src={topImage} alt="top" className="w-full h-64 object-cover" />
+      <img src={topImage} alt="top" className="w-full h-72 object-cover" />
 
       {/* Konten */}
       <div className="p-6 text-center">

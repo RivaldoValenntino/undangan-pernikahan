@@ -219,7 +219,10 @@ function RouteComponent() {
         </div>
 
         {/* Couple */}
-        <div ref={coupleRef} className="h-screen bg-[#FFF2EB] py-12">
+        <div
+          ref={coupleRef}
+          className="min-h-screen h-screen bg-[#FFF2EB] py-8"
+        >
           <UndanganCard
             onAction={() =>
               storyRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -243,7 +246,7 @@ function RouteComponent() {
 
         {/* Gallery */}
         <div
-          className="bg-[#FFF2EB] min-h-screen flex items-center justify-center"
+          className="bg-[#FFF2EB] h-screen min-h-screen flex items-center justify-center py-8"
           ref={storyRef}
         >
           <StorySection
