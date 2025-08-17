@@ -11,7 +11,7 @@ const navItems: NavItem[] = [
   { label: "Invitation", icon: <Mail size={22} /> },
   { label: "Couple", icon: <Heart size={22} /> },
   { label: "Story", icon: <Book size={22} /> },
-  { label: "Event", icon: <CalendarDays size={22} /> },
+  { label: "RSVP", icon: <CalendarDays size={22} /> },
   { label: "Gift", icon: <Gift size={22} /> },
 ];
 
