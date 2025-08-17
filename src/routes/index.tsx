@@ -264,7 +264,7 @@ function RouteComponent() {
         {/* RSVP */}
         <div
           ref={rsvpRef}
-          className="bg-[#FFF2EB] min-h-sceeen flex flex-col items-center justify-center p-4 sm:p-6"
+          className="bg-[#FFF2EB] flex flex-col items-center justify-center py-12"
         >
           <WeddingInfoCard
             date="Sunday, 21 July 2024"
