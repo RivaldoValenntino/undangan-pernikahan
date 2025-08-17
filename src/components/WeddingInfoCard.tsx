@@ -15,7 +15,7 @@ const WeddingInfoCard: React.FC<WeddingInfoCardProps> = ({
   address,
 }) => {
   return (
-    <div className="bg-white w-full max-w-sm mx-auto p-6 sm:p-8 text-center relative overflow-hidden font-poppins shadow-md">
+    <div className="bg-white w-full max-w-md mx-auto p-6 sm:p-8 text-center relative overflow-hidden font-poppins shadow-md">
       {/* Gradient accent */}
       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-400 to-pink-600"></div>
 

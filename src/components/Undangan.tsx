@@ -11,7 +11,7 @@ const Undangan = ({
 }) => {
   return (
     <section
-      className="flex items-center py-12 h-dvh mb-20 px-4 bg-[#FFF2EB] flex-col gap-8 font-montaga"
+      className="flex items-center py-12 h-dvh mb-20 px-4 bg-secondary flex-col gap-8 font-montaga"
       ref={refProps}
     >
       <div className="bg-white px-6 py-8 rounded-md w-full mx-auto max-w-3xl shadow-md relative flex flex-col items-center">
@@ -32,7 +32,7 @@ const Undangan = ({
         <button
           type="button"
           onClick={onAction}
-          className="rounded-md bg-primary px-4 py-3 w-full mt-8 max-w-sm mx-auto flex items-center justify-center gap-2 cursor-pointer"
+          className="rounded-md bg-pink-600 px-4 py-3 w-full mt-8 max-w-sm mx-auto flex items-center justify-center gap-2 cursor-pointer"
           style={{ color: "#FFFFFF" }}
         >
           <Heart size={20} />

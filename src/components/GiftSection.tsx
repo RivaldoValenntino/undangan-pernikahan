@@ -91,9 +91,9 @@ export default function GiftSection() {
 
       {/* Disqus Section */}
       <section className="w-full mx-auto px-4 py-10">
-        <h3 className="text-xl font-semibold text-gray-700 mb-4 text-center">
-          Share Your Thoughts
-        </h3>
+        <h1 className="text-2xl font-semibold text-pink-600 mb-4 text-center">
+          Give your wishes & messages
+        </h1>
         <div id="disqus_thread" className="bg-white shadow-md rounded-xl p-4" />
       </section>
     </div>

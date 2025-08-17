@@ -1,7 +1,7 @@
 import React from "react";
 // import { Instagram, Twitter, Facebook, Heart } from "lucide-react";
 import flowerDecoration from "../assets/images/bunga-2.png";
-import { Heart } from "lucide-react";
+import { BookHeart } from "lucide-react";
 interface Person {
   name: string;
   role: string;
@@ -117,7 +117,7 @@ const UndanganCard: React.FC<UndanganCardProps> = ({
           type="button"
           className="flex items-center justify-center gap-2 cursor-pointer bg-pink-500 hover:bg-pink-600 text-white font-medium px-6 py-2 rounded-lg transition"
         >
-          <Heart size={18} />
+          <BookHeart size={18} />
           Our Story
         </button>
       </div>

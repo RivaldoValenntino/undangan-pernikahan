@@ -226,7 +226,7 @@ function RouteComponent() {
         </div>
 
         {/* Invitation */}
-        <div ref={invitationRef} className="h-screen min-h-screen bg-[#FFF2EB]">
+        <div ref={invitationRef} className="h-screen min-h-screen bg-secondary">
           <Undangan
             refProps={invitationRef}
             onAction={() =>
@@ -238,7 +238,7 @@ function RouteComponent() {
         {/* Couple */}
         <div
           ref={coupleRef}
-          className="bg-[#FFF2EB] flex items-center justify-center py-8"
+          className="bg-secondary flex items-center justify-center py-8"
         >
           <UndanganCard
             onAction={() =>
@@ -263,7 +263,7 @@ function RouteComponent() {
 
         {/* Gallery */}
         <div
-          className="bg-[#FFF2EB] flex flex-col items-center justify-center py-12 gap-12"
+          className="bg-secondary flex flex-col items-center justify-center py-12 gap-12"
           ref={storyRef}
         >
           <h1 className="text-3xl font-bold font-montaga text-pink-600 py-4">
@@ -285,7 +285,7 @@ function RouteComponent() {
         {/* RSVP */}
         <div
           ref={rsvpRef}
-          className="bg-[#FFF2EB] min-h-screen flex flex-col items-center justify-center py-12"
+          className="bg-secondary min-h-screen flex flex-col items-center justify-center py-12"
         >
           <h1 className="text-3xl font-bold font-montaga text-pink-600 py-4">
             RSVP
@@ -315,12 +315,14 @@ function RouteComponent() {
             It's an honor and happiness for us if Mr/Ms/Brother is willing to
             attend to give blessings to the bride and groom.
           </p>
-          <WeddingAttendanceForm />
+          <div className="w-full">
+            <WeddingAttendanceForm />
+          </div>
         </div>
 
         <div
           ref={giftRef}
-          className="bg-[#FFF2EB] min-h-screen flex items-center justify-center py-8"
+          className="bg-secondary min-h-screen flex items-center justify-center py-8"
         >
           <GiftSection />
         </div>

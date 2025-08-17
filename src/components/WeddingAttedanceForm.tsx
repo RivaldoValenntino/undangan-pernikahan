@@ -59,20 +59,20 @@ export default function WeddingAttendanceForm() {
   };
 
   return (
-    <div className="flex justify-center items-center bg-[#FFF2EB] h-screen px-4 font-montaga pb-32">
+    <div className="flex justify-center items-center bg-secondary h-screen px-4 font-montaga pb-32">
       <Toaster position="top-center" reverseOrder={false} />
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-xl bg-white shadow-md rounded-md p-12 space-y-6"
+        className="w-full max-w-3xl bg-white shadow-md rounded-md p-12 space-y-6"
       >
         <h2 className="text-3xl font-bold text-center text-pink-600 mb-6">
-          Konfirmasi Kehadiran
+          Attedance Form
         </h2>
 
         {/* Nama */}
         <div>
           <label className="block text-lg font-medium text-gray-700 mb-2">
-            Nama Lengkap
+            Name
           </label>
           <input
             type="text"
@@ -81,14 +81,14 @@ export default function WeddingAttendanceForm() {
             onChange={handleChange}
             required
             className="w-full border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
-            placeholder="Masukkan nama Anda"
+            placeholder="Enter your name here"
           />
         </div>
 
         {/* Jumlah Tamu */}
         <div>
           <label className="block text-lg font-medium text-gray-700 mb-2">
-            Jumlah Tamu
+            Number of Guests
           </label>
           <input
             type="number"
@@ -98,7 +98,7 @@ export default function WeddingAttendanceForm() {
             required
             min="1"
             className="w-full border border-gray-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
-            placeholder="Masukkan jumlah tamu"
+            placeholder="Enter the number of guests"
           />
         </div>
 
