@@ -26,7 +26,7 @@ const UndanganCard: React.FC<UndanganCardProps> = ({
   onAction,
 }) => {
   return (
-    <div className="bg-white rounded-md shadow-md max-w-xl mx-auto p-6 text-center h-fit w-full font-montaga">
+    <div className="bg-white rounded-md shadow-md max-w-md mx-auto p-6 text-center h-fit w-full font-montaga">
       {/* Title */}
       <h2 className="text-pink-600 text-2xl font-bold mb-2">
         Lorem ipsum dolor sit amet.

@@ -16,7 +16,7 @@ const StorySection: React.FC<StorySectionProps> = ({
   description,
 }) => {
   return (
-    <div className="max-w-xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden font-montaga">
+    <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden font-montaga">
       {/* Gambar Atas */}
       <img src={topImage} alt="top" className="w-full h-64 object-cover" />
 
