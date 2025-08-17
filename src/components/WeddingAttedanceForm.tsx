@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-
+import toast, { Toaster } from "react-hot-toast";
 export default function WeddingAttendanceForm() {
   const [formData, setFormData] = useState({
     nama: "",
@@ -8,7 +8,7 @@ export default function WeddingAttendanceForm() {
     status: "",
   });
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  //   const [success, setSuccess] = useState(false);
 
   const [openDropdown, setOpenDropdown] = useState(false);
   const statusOptions = ["Hadir", "Tidak Hadir"];
@@ -33,7 +33,7 @@ export default function WeddingAttendanceForm() {
 
     try {
       if (!formData.status) {
-        alert("Status kehadiran harus diisi.");
+        toast.error("Status Kehadiran Harus Diisi!!!");
         return;
       }
       const response = await fetch(scriptURL, {
@@ -45,8 +45,7 @@ export default function WeddingAttendanceForm() {
       });
 
       if (response.ok) {
-        setSuccess(true);
-        setTimeout(() => setSuccess(false), 2000);
+        toast.success("Data kehadiran berhasil dikirim.");
         setFormData({ nama: "", jumlah: "", status: "" });
       } else {
         alert("Terjadi kesalahan, coba lagi.");
@@ -61,6 +60,7 @@ export default function WeddingAttendanceForm() {
 
   return (
     <div className="flex justify-center items-center bg-[#FFF2EB] h-screen px-4 font-montaga pb-32">
+      <Toaster position="top-center" reverseOrder={false} />
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-xl bg-white shadow-md rounded-md p-12 space-y-6"
@@ -140,11 +140,11 @@ export default function WeddingAttendanceForm() {
           {loading ? "Mengirim..." : "Kirim"}
         </button>
 
-        {success && (
+        {/* {success && (
           <p className="text-green-600 text-center text-lg mt-4">
             Terima kasih! Data berhasil dikirim.
           </p>
-        )}
+        )} */}
       </form>
     </div>
   );
