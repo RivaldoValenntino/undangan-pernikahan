@@ -255,8 +255,8 @@ function RouteComponent() {
           <StorySection
             title="THE FIRST MEET"
             year="2018"
-            topImage="https://picsum.photos/400/250?random=2"
-            bottomImage="https://picsum.photos/400/200?random=2"
+            topImage="/src/assets/images/bg-prewed2.jpg"
+            bottomImage="/src/assets/images/bg-prewed.jpg"
             description="Lorem ipsum justo, enim augue neque, eu pulvinar etiam. Elit quam gravida a nec. Mauris eu nulla vulputate vitae nisl, massa vulputate tellus sit. Sit integer cras nibh sodales. Sit pharetra, tellus elit in."
           />
         </div>
@@ -264,16 +264,15 @@ function RouteComponent() {
         {/* RSVP */}
         <div
           ref={rsvpRef}
-          className="bg-[#FFF2EB] flex flex-col items-center justify-center py-12"
+          className="bg-[#FFF2EB] min-h-screen flex flex-col items-center justify-center py-12"
         >
+          {/* Google Maps */}
           <WeddingInfoCard
             date="Sunday, 21 July 2024"
             time="10:00 AM - 12:00 PM"
             location="Grand Ballroom Hotel XYZ"
             address="Jl. Soekarno-Hatta No.791B, Babakan Penghulu, Kec. Cinambo, Kota Bandung, Jawa Barat 40293"
           />
-
-          {/* Google Maps */}
           <div className="w-full max-w-lg mt-6 rounded-xl overflow-hidden shadow-lg">
             <div className="aspect-[4/3] w-full">
               <iframe
