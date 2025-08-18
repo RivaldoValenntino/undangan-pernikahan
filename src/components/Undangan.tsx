@@ -2,6 +2,7 @@ import ImageTriple from "./ImageTriple";
 import WeddingHeaderCard from "./WeddingHeader";
 import flowerDecoration from "../assets/images/bunga-2.png";
 import { Heart } from "lucide-react";
+
 const Undangan = ({
   refProps,
   onAction = () => {},
@@ -11,15 +12,18 @@ const Undangan = ({
 }) => {
   return (
     <section
-      className="flex items-center py-12 h-dvh mb-20 px-4 bg-secondary flex-col gap-8 font-montaga"
       ref={refProps}
+      className="flex items-center py-12 h-dvh mb-20 px-4 bg-secondary flex-col gap-8 font-montaga"
     >
-      <div className="bg-white px-6 py-8 rounded-md w-full mx-auto max-w-3xl shadow-md relative flex flex-col items-center">
+      <div className="bg-white px-6 py-10 rounded-2xl w-full max-w-2xl shadow-lg relative flex flex-col items-center text-center">
+        {/* Dekorasi bunga */}
         <img
           src={flowerDecoration}
           alt=""
-          className="absolute -bottom-25 -translate-y-1/2 left-1/2 -translate-x-1/2"
+          className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-40"
         />
+
+        {/* Foto 3 bulat */}
         <ImageTriple
           images={[
             "https://i.pravatar.cc/100?img=1",
@@ -28,24 +32,19 @@ const Undangan = ({
           ]}
         />
 
+        {/* Header + countdown */}
         <WeddingHeaderCard date="20 September 2025" />
+
+        {/* Tombol */}
         <button
           type="button"
           onClick={onAction}
-          className="rounded-md bg-pink-600 px-4 py-3 w-full mt-8 max-w-sm mx-auto flex items-center justify-center gap-2 cursor-pointer"
-          style={{ color: "#FFFFFF" }}
+          className="rounded-md bg-pink-600 px-6 py-3 w-full mt-8 max-w-sm flex items-center justify-center gap-2 text-white font-semibold shadow-md hover:bg-pink-700 transition"
         >
           <Heart size={20} />
           Meet The Couple
         </button>
       </div>
-      {/* <WeddingInfoCard
-        date="Sunday, 21 July 2024"
-        time="10:00 AM - 12:00 PM"
-        location="Grand Ballroom Hotel XYZ"
-        address="Jl. Merdeka No.45, Jakarta"
-        mapLink="https://goo.gl/maps/example"
-      /> */}
     </section>
   );
 };
